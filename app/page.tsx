@@ -37,16 +37,16 @@ export default function Home() {
         hey, I&apos;m avyudaya 👋
       </h1>
       <p className="prose prose-neutral dark:prose-invert">
-        {`I'm a backend developer from Kathmandu, Nepal. I am techincally detailed and like to solve problems. I currently `}
+        {`I'm a software engineer from Kathmandu, Nepal. I am techincally detailed and like to solve problems. I currently `}
         <Link href="/work">work</Link>
-        {`as a freelance software developer at `}
+        {` as a freelance software developer at `}
         <span className="not-prose">
           <Badge target="_blank" href="https://upwork.com">
             <Image src={upworkLogo} alt="Upwork Logo" />
             UpWork.
           </Badge>
         </span>
-        {` I also teach students programming at `}
+        {` I also teach students full-stack programming at `}
         <Badge target="_blank" href="https://deerwalktrainingcenter.com/">
           <Image
             src="/deerwalk.png"
