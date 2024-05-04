@@ -69,7 +69,7 @@ export default function Home() {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://google.com/"
+            href="https://1drv.ms/w/c/8f596644d72a1118/ERgRKtdEZlkggI_1twEAAAABKNYK6df5Q_R7IWgJy5T36w"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">View my resume</p>
