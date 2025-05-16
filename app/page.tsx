@@ -1,81 +1,65 @@
-import Link from "next/link";
-import upworkLogo from "../public/upwork.svg";
 import Image from "next/image";
+import { socialLinks } from "./config";
 
-function Badge(props: any) {
-  return (
-    <a
-      {...props}
-      target="_blank"
-      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
-    />
-  );
-}
-
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
-export default function Home() {
+export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium tracking-tighter">
-        hey, I&apos;m avyudaya 👋
+      <a href={socialLinks.twitter} target="_blank">
+        <Image
+          src="/profile.png"
+          alt="Profile photo"
+          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+          unoptimized
+          width={160}
+          height={160}
+          priority
+        />
+      </a>
+      <h1 className="mb-8 text-2xl font-medium">
+        Portfolio template!
       </h1>
-      <p className="prose prose-neutral dark:prose-invert">
-        {`I'm a software engineer from Kathmandu, Nepal. I am techincally detailed and like to solve problems. I currently `}
-        <Link href="/work">work</Link>
-        {` as a freelance software developer at `}
-        <span className="not-prose">
-          <Badge target="_blank" href="https://upwork.com">
-            <Image src={upworkLogo} alt="Upwork Logo" />
-            UpWork.
-          </Badge>
-        </span>
-        {` I also teach students full-stack programming at `}
-        <Badge target="_blank" href="https://deerwalktrainingcenter.com/">
-          <Image
-            src="/deerwalk.png"
-            width="14"
-            height="14"
-            alt="Deerwalk Logo"
-          />
-          Deerwalk Training Center.
-        </Badge>
-      </p>
-
-      {/* TODO: Build image section */}
-      {/* <div className="grid grid-cols-2 grid-rows-4 sm:grid-rows-3 sm:grid-cols-3 gap-4 my-8">
-        <div className="relative h-40"></div>
-      </div> */}
-
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
+      <div className="prose prose-neutral dark:prose-invert">
+        <p>
+          A clean, fast, and lightweight portfolio template built with Next.js,
+          Vercel, and Tailwind CSS.
+        </p>
+        <p>
+          Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
+          Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
             target="_blank"
-            href="https://rxresu.me/avyudaya7/resume"
+            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
           >
-            <ArrowIcon />
-            <p className="ml-2 h-7">View my resume</p>
+            more
           </a>
-        </li>
-      </ul>
+          .
+        </p>
+        <p>
+          Nextfolio is{" "}
+          <a href={socialLinks.github} target="_blank">
+            open-source
+          </a>{" "}
+          and fully customizable, making it easy to add more features.
+        </p>
+        <p>
+          <a
+            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
+            target="_blank"
+          >
+            Deploy
+          </a>{" "}
+          your Nextfolio site with Vercel in minutes and follow the set up
+          instructions in the{" "}
+          <a href="/blog/getting-started">Getting Started</a> post.
+        </p>
+        <p>
+          Built and maintained by{" "}
+          <a href="https://imsirius.xyz/" target="_blank">
+            Sirius
+          </a>
+          .
+        </p>
+      </div>
     </section>
   );
 }
