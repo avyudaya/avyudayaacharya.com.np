@@ -6,9 +6,17 @@ export const metadata = {
   description: "Nextfolio Blog",
 };
 
+interface BlogPost {
+  slug: string;
+  metadata: {
+    title: string;
+    publishedAt: string;  // Could be Date if you're working with Date objects
+  };
+}
+
 export default function BlogPosts() {
   // let allBlogs = getBlogPosts();
-  let allBlogs = []
+  let allBlogs: BlogPost[] = []
 
   return (
     <section>
