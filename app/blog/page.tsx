@@ -7,11 +7,12 @@ export const metadata = {
 };
 
 export default function BlogPosts() {
-  let allBlogs = getBlogPosts();
+  // let allBlogs = getBlogPosts();
+  let allBlogs = []
 
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium">Our Blog</h1>
+      <h1 className="mb-8 text-2xl font-medium">Blogs</h1>
       <div>
         {allBlogs
           .sort((a, b) => {
